@@ -30,7 +30,7 @@ Resolver is a DataHub microservice for resolving datapackage URLs into more huma
  - `path` - takes {username/pkgname}
 
 **Returns:**
-if user found in the system::
+If user found in the system:
 ```json
 {
     "packageid": "<packageid>",
