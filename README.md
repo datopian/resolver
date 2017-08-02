@@ -15,3 +15,33 @@ Resolver is a DataHub microservice for resolving datapackage URLs into more huma
 # Run server
 
 `python server.py`
+
+
+## API
+
+### Resolves username to userid 
+
+`/resolver/resolve`
+
+**Method:** `GET`
+
+**Query Parameters:**
+
+ - `path` - takes {username/pkgname}
+
+**Returns:**
+If user found in the system:
+```json
+{
+    "packageid": "<packageid>",
+    "userid": "<userid>"
+}
+```
+If user not found:
+```json
+{
+    "packageid": "<packageid>",
+    "userid": null
+}
+```
+
