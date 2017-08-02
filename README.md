@@ -19,7 +19,7 @@ Resolver is a DataHub microservice for resolving datapackage URLs into more huma
 
 ## API
 
-### Get information about userid and packageid 
+### Resolves username to userid 
 
 `/resolver/resolve`
 
@@ -30,14 +30,14 @@ Resolver is a DataHub microservice for resolving datapackage URLs into more huma
  - `path` - takes {username/pkgname}
 
 **Returns:**
-If exists username and pkgname:
+if user found in the system::
 ```json
 {
     "packageid": "<packageid>",
     "userid": "<userid>"
 }
 ```
-if there is no user, it return null:
+If user not found:
 ```json
 {
     "packageid": "<packageid>",
